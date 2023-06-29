@@ -1,0 +1,412 @@
+Udemy Course - 02: Complete guide to ASP.NET Core MVC (.NET 8) [E-Commerce App];                                                                                                                                         Udemy Course Link: https://www.udemy.com/course/complete-aspnet-core-21-course/	
+
+//string sentence1 = "     Harsh    ";
+//string sentence2 = "is a good boy";
+
+//Console.WriteLine($"{sentence1} jha {sentence2.Length} output");
+
+//string modifiedStart = sentence1.TrimStart();
+//string modifiedend = sentence1.TrimEnd();
+//string modified = sentence1.Trim();
+
+
+//Console.WriteLine($"{modifiedStart} , {modifiedend} , {modified} ");
+//string replace =  sentence2.Replace("good" , "bad");
+//Console.WriteLine(replace);
+
+//working with contains , startswith and endwith
+
+//string newStr = "We are learning .net ";
+
+//Console.WriteLine(newStr.Contains("a"));--true
+//Console.WriteLine(newStr.Contains(".net"));--true
+//Console.WriteLine(newStr.Contains(" "));--true
+//Console.WriteLine(newStr.StartsWith("W"));--true
+//Console.WriteLine(newStr.StartsWith("We"));--true
+//Console.WriteLine(newStr.StartsWith(".net"));--False
+//Console.WriteLine(newStr.EndsWith(".net")); true
+//Console.WriteLine(newStr.EndsWith("t")); 
+
+//Console.WriteLine(newStr.EndsWith("e")); --false
+//Console.WriteLine(newStr.EndsWith(" "));
+
+====================================================================================================
+
+
+
+
+
+// // working with int
+// // int a = 18;
+// // int b = 6;
+// // int c = a / b;
+// // int z = a * b;
+// // int y = a + b;
+// // int n = a - b;
+// // int allOp = ((a+b)/b)*c;
+// // Console.WriteLine($"{c},{z},{y},{n},{allOp}");
+
+// //working with double:
+// double num1 = 5.0;
+// double num2 = 15.9;
+// double results = num2/num1;
+
+// //Console.WriteLine(results);
+
+
+// //range of dataTypes:
+
+// // int intmax = int.MaxValue;
+// // int intmin = int.MinValue;
+
+// // double dmax = double.MaxValue;
+// // double dmin= double.MinValue;
+
+// //Console.WriteLine($"int range-{intmax}to{intmin}  double range{dmax}{dmin}");
+
+
+// // decimal value1 = 3.0M;
+// // decimal value2 = 1.0M;
+// // decimal myresult = value2/value1;
+
+
+// // Console.WriteLine(myresult);
+
+// // parameter of rectangle:
+
+// int lenght = 125;
+// int width = 24;
+// double parameter = 2*(lenght+width);
+
+// Console.WriteLine(parameter);
+
+
+===================================================================================
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // using if and else:
+
+            int number = 5;
+            int number2 = 23;
+
+            int sum = number + number2;
+
+            if (sum > 30)
+            {
+
+              //  Console.WriteLine($"if block run s {sum}");
+            }
+            else
+            {
+
+               // Console.WriteLine($"else block run {sum}");
+            }
+
+            //using && , || multiple in if conditions:
+
+            if (sum > 25 && sum < 30)
+            {
+
+            //    Console.WriteLine($"if block run {sum}");
+
+
+            }
+            else {
+
+             //   Console.WriteLine($"else block has run {sum}");
+                
+            }
+
+            if (sum < 25 || sum == 27)
+            {
+
+                Console.WriteLine($"if block {sum}");
+
+            }
+            else {
+
+
+                Console.WriteLine($"else block {sum}");
+            }
+
+        }
+    }
+}
+
+======================================================================================================
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // using while loops:
+
+
+            short num = 45;
+            int i = 0;
+            //using while loops
+           // while (i < num)
+           // {
+
+              //  Console.WriteLine(i);
+             //   i++;
+          //  }
+
+
+            //using do while loops:
+
+            /*do
+            {
+
+                Console.WriteLine("nothing");
+                i++;
+            }while(i < num);*/
+            
+            //using for loops:
+
+/*
+            for(i=0;i<num; i++)
+            {
+
+                Console.WriteLine(i);
+            }*/
+        }
+           
+    }
+}
+====================================================================
+
+//combine the loops and branches
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //code sum of all the integres which is divisible by 3:
+            int sum = 0;
+            for(int i = 0; i < 20; i++)
+            {
+
+
+                if(i%3==0)
+                {
+                    Console.WriteLine(i);
+                    sum += i; 
+
+                    if (i   == 0) {
+                        Console.WriteLine($"is divisible by every number");
+                    }
+                }
+              
+            }
+            Console.WriteLine(sum);
+
+
+        }
+           
+    }
+}
+
+======================================================================================
+//use of list with foreach and normal for loop:
+           
+            // var is used when we don't exactly know what is stored
+
+
+            var values = new List<int>();
+
+            values.Add(1);
+            values.Add(2);  
+            values.Add(3);
+
+
+            //SIMPLE FOR LOOP
+            for (int i = 0; i < values.Count; i++) {
+
+                Console.WriteLine(values[i]);
+            }
+
+            //USING FOREACH
+
+            foreach (int value in values)
+            {
+                Console.WriteLine(value);
+
+            }
+
+            //now using string
+
+            var datas = new List<String> {"Harsh" , "Amit" , "Rahul" };
+
+            foreach (String data in datas)
+            {
+                Console.WriteLine(data);
+            }
+
+
+            var someMoreData = new List<double> { 3.0, 9.0, 9.8 };
+
+            foreach (double data in someMoreData) { 
+            
+               // Console.WriteLine("," + data  );
+            }
+
+            Console.WriteLine($"this is the value at 0th index {someMoreData[0]}");
+        }
+
+
+==========================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // doing opreations on list of string:
+
+            var list = new List<string>();
+
+            list.Add("Harsh");
+            list.Add("Billu");
+            list.Add("Sumit");
+            list.Add("Yudhister");
+
+            //using sort method
+            list.Sort();
+
+            foreach (string item in list)
+            {
+                
+                Console.WriteLine(item);
+                //using indexOf
+
+
+
+
+            }
+
+            Console.WriteLine($"the index of harsh after sorting is {list.IndexOf("Harsh")}");
+
+
+        }
+    }
+}
+======================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+           //fabbonaci series :
+
+            var list = new List<int> { 0,1,1};
+
+            int value1 = list[list.Count - 1];
+            int value2 = list[list.Count - 2];
+
+            list.Add(value1+value2);
+
+            foreach (int i in list) { 
+            
+                Console.WriteLine(i);
+            
+            }
+
+
+        }
+    }
+}
+===============================================
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.ConstrainedExecution;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //fabbonaci seriesof first 20 numbers :
+
+            int sumUpto = 20;
+
+            int a = 0;
+            int b = 1;
+            int sum = 0;
+
+            for (int i = 2; i <= sumUpto; i++)
+            {
+
+                sum = a + b;
+                a = b;
+                b = sum;
+            }
+
+            Console.WriteLine(sum);
+
+        }
+    }
+}
+
+
+
+==================================================================
+
+
+
+
+
+
+					
